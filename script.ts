@@ -12,3 +12,7 @@ main()
   .finally(async () => {
     await prisma.$disconnect();
   });
+
+function f4(): undefined {
+  // no returns
+}
