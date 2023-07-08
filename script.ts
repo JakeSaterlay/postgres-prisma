@@ -3,16 +3,12 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
-  const user = await prisma.user.findFirst();
-  console.log(user);
+	const user = await prisma.user.findFirst();
+	console.log(user);
 }
 
 main()
-  .catch((e) => console.error(e.message))
-  .finally(async () => {
-    await prisma.$disconnect();
-  });
-
-function f4(): undefined {
-  // no returns
-}
+	.catch((e) => console.error(e.message))
+	.finally(async () => {
+		await prisma.$disconnect();
+	});
